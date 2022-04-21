@@ -7,8 +7,9 @@ export const StyledCarousel = styled.div `
 
     .carousel-img {
         width: 100%;
+        width: 100%;
         height: 350px;
-        object-fit: fill;
+        object-fit: cover;
     }
 
     .carousel-actions {

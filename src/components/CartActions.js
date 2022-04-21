@@ -9,7 +9,7 @@ const CartActions = (props) => {
         <p className="count">{props.itemQuantity}</p>
         <button className="cart-btn" onClick={props.handleAdd}>+</button>
       </div>
-      <button className="add-cart-btn">
+      <button className="add-cart-btn" onClick={props.addToCart}>
         <img src="./images/icon-cart.svg" alt="cart" className="cart-img" />
         Add to cart
       </button>
