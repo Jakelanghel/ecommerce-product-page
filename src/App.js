@@ -7,6 +7,7 @@ import Carousel from "./components/Carousel"
 import ProductDetails from "./components/ProductDetails";
 import CartActions from "./components/CartActions";
 import Menu from "./components/Menu";
+import Cart from "./components/Cart";
 
 function App() {
 
@@ -45,6 +46,7 @@ function App() {
         {menuIsOpen && <Menu handleClick={toggleMenu}/>}
         <Nav handleClick={toggleMenu} cartQuantity={cart.quantity}/>
         <Carousel/>
+        <Cart/>
         <ProductDetails />
         <CartActions handleAdd={addItem} handleSub={subtractItem} addToCart={addToCart} itemQuantity={quantity} />
       </main>
