@@ -18,27 +18,25 @@ const Nav = (props) => {
         </button>
 
         <img src="./images/logo.svg" alt="sneakers logo" className="logo" />
-
-        
       </div>
 
       <div className="desktop-nav-list">
-          <a href="#" className="nav-link">
-            collections
-          </a>
-          <a href="#" className="nav-link">
-            men
-          </a>
-          <a href="#" className="nav-link">
-            women
-          </a>
-          <a href="#" className="nav-link">
-            about
-          </a>
-          <a href="#" className="nav-link">
-            contact
-          </a>
-        </div>
+        <a href="#" className="nav-link">
+          collections
+        </a>
+        <a href="#" className="nav-link">
+          men
+        </a>
+        <a href="#" className="nav-link">
+          women
+        </a>
+        <a href="#" className="nav-link">
+          about
+        </a>
+        <a href="#" className="nav-link">
+          contact
+        </a>
+      </div>
 
       <div className="flex">
         {props.cartQuantity > 0 && (

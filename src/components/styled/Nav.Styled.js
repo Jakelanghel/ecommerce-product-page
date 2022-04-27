@@ -1,79 +1,77 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
-export const StyledNav = styled.nav `
-    width: 100%;
+export const StyledNav = styled.nav`
+  width: 100%;
+  display: flex;
+  padding: 1rem;
+  padding-left: 0;
+  justify-content: space-between;
+  position: relative;
+
+  .desktop-nav-list {
+    display: none;
+  }
+
+  .flex {
     display: flex;
-    padding: 1rem;
-    padding-left: 0;
-    justify-content: space-between;
-    position: relative;
+    align-items: center;
+  }
+
+  .menu-btn {
+    border: none;
+    background-color: transparent;
+    padding: 1rem 1.5rem;
+    display: flex;
+  }
+
+  .avatar-img {
+    width: 35px;
+    margin-left: 1.5rem;
+  }
+
+  .cart-quantity {
+    font-size: 0.5rem;
+    font-weight: 700;
+    padding: 0 6px;
+    border-radius: 40%;
+    color: ${({ theme }) => theme.colors.white};
+    background-color: ${({ theme }) => theme.colors.orange};
+    position: absolute;
+    top: 21px;
+    right: 77px;
+  }
+
+  .cart-btn {
+    border: none;
+    background-color: transparent;
+  }
+
+  @media (min-width: 900px) {
+    position: static;
+    padding: 2rem 8rem;
+    border-bottom: solid 1px ${({ theme }) => theme.colors.lightGray};
 
     .desktop-nav-list {
-        display: none;
+      width: 60%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
     }
 
-    .flex {
-        display : flex;
-        align-items: center;
+    .nav-link {
+      color: ${({ theme }) => theme.colors.darkGrayishBlue};
+      text-transform: capitalize;
+      text-decoration: none;
+      margin-right: 1.5rem;
     }
 
     .menu-btn {
-        border: none;
-        background-color: transparent;
-        padding: 1rem 1.5rem;
-        display: flex;
-    }
-    
-    .avatar-img {
-        width: 35px;
-        margin-left: 1.5rem;
+      padding: 0;
+      display: none;
     }
 
-    .cart-quantity {
-        font-size: .5rem;
-        font-weight: 700;
-        padding: 0 6px;
-        border-radius: 40%;
-        color: ${({theme}) => theme.colors.white};
-        background-color: ${({theme}) => theme.colors.orange};
-        position: absolute; 
-        top: 21px;
-        right: 77px;
+    .menu-img {
+      display: none;
     }
-
-    .cart-btn {
-        border: none;
-        background-color: transparent;
-    }
-
-
-    @media(min-width: 900px) {
-        
-        position: static;
-        padding: 2rem 8rem;
-        border-bottom: solid 1px ${({theme }) => theme.colors.lightGray};
-
-        .desktop-nav-list {
-            width: 60%;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-        }
-
-        .nav-link {
-            color: ${({theme}) => theme.colors.darkGrayishBlue};
-            text-transform: capitalize;
-            text-decoration: none;
-            margin-right: 1.5rem;
-        }
-
-        .menu-btn {
-            padding: 0;
-            display: none;
-        }
-
-        .menu-img {
-            display: none;
-        }
-    }
-`
+  }
+`;
