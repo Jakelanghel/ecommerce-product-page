@@ -14,14 +14,15 @@ const ProductDetails = () => {
           Featuring a durable rubber outer sole, they'll withstand everything
           the weather can offer.
         </p>
-        <div className="container-price">
-          <div className="container-discount">
-            <p className="current-price">$125.00</p>
-            <p className="discount">50%</p>
-          </div>
+      </div>
 
-          <p className="og-price">$250.00</p>
+      <div className="container-price">
+        <div className="container-discount">
+          <p className="current-price">$125.00</p>
+          <p className="discount">50%</p>
         </div>
+
+        <p className="og-price">$250.00</p>
       </div>
     </StyledProductDetails>
   );

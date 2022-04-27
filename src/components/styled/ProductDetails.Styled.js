@@ -1,9 +1,12 @@
 import styled from "styled-components";
 
 export const StyledProductDetails = styled.div`
-  padding: 1.5rem;
   max-width: 450px;
   margin: 0 auto;
+
+  .container-details {
+    padding: 1.5rem;
+  }
 
   .brand {
     font-size: 0.85rem;
@@ -61,5 +64,9 @@ export const StyledProductDetails = styled.div`
   @media (min-width: 900px) {
     max-width: 80%;
     display: flex;
+
+    .container-details {
+      width: 50%;
+    }
   }
 `;

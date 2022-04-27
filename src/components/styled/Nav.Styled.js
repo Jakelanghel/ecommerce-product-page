@@ -47,10 +47,11 @@ export const StyledNav = styled.nav`
   }
 
   @media (min-width: 900px) {
+    width: 80%;
     position: static;
-    padding: 2rem 8rem;
+    padding: 2rem 0;
     border-bottom: solid 1px ${({ theme }) => theme.colors.lightGray};
-
+    margin: 0 auto;
     .desktop-nav-list {
       width: 60%;
       display: flex;

@@ -9,7 +9,7 @@ export const StyledCarousel = styled.div`
   .carousel-img {
     width: 100%;
     height: 350px;
-    /* object-fit: cover; */
+    object-fit: cover;
   }
 
   .carousel-actions {
@@ -41,6 +41,14 @@ export const StyledCarousel = styled.div`
 
     .carousel-img {
       border-radius: 10px;
+    }
+  }
+
+  @media (min-width: 900px) {
+    width: 50%;
+    padding: 0 2rem;
+    .carousel-actions {
+      display: none;
     }
   }
 `;
