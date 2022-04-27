@@ -3,6 +3,14 @@ import styled from "styled-components"
 
 export const StyledProductDetails = styled.div `
     padding: 1.5rem;
+    max-width: 450px;
+    margin: 0 auto;
+
+    @media(min-width:450px) {
+        text-align: center;
+        margin: 0 auto;
+        
+    }
     
     .brand {
         font-size: .85rem;
@@ -47,10 +55,16 @@ export const StyledProductDetails = styled.div `
     .og-price {
         color: ${({theme}) => theme.colors.grayishBlue}
     }
+
     div {
         display: flex;
         align-items: center;
 
+    }
+
+    @media(min-width: 1000px) {
+        display: flex;
+        
     }
 
 

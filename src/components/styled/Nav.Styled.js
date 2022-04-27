@@ -3,19 +3,25 @@ import styled from "styled-components"
 export const StyledNav = styled.nav `
     width: 100%;
     display: flex;
-    padding: 1.5rem;
+    padding: 1rem;
+    padding-left: 0;
     justify-content: space-between;
     position: relative;
+
+    .desktop-nav-list {
+        display: none;
+    }
 
     .flex {
         display : flex;
         align-items: center;
     }
 
-    .menu-img {
-        width: 18px;
-        height: 18px;
-        margin-right: 1rem;
+    .menu-btn {
+        border: none;
+        background-color: transparent;
+        padding: 1rem 1.5rem;
+        display: flex;
     }
     
     .avatar-img {
@@ -31,7 +37,43 @@ export const StyledNav = styled.nav `
         color: ${({theme}) => theme.colors.white};
         background-color: ${({theme}) => theme.colors.orange};
         position: absolute; 
-        top: 25px;
+        top: 21px;
         right: 77px;
+    }
+
+    .cart-btn {
+        border: none;
+        background-color: transparent;
+    }
+
+
+    @media(min-width: 900px) {
+        
+        position: static;
+        padding: 2rem 8rem;
+        border-bottom: solid 1px ${({theme }) => theme.colors.lightGray};
+
+        .desktop-nav-list {
+            width: 60%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: ${({theme}) => theme.colors.darkGrayishBlue};
+            text-transform: capitalize;
+            text-decoration: none;
+            margin-right: 1.5rem;
+        }
+
+        .menu-btn {
+            padding: 0;
+            display: none;
+        }
+
+        .menu-img {
+            display: none;
+        }
     }
 `

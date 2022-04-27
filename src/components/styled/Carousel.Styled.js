@@ -3,14 +3,18 @@ import styled from "styled-components"
 export const StyledCarousel = styled.div `
     width: 100%;
     position: relative;
+    max-width: 450px;
+    margin: 0 auto;
 
+  
 
     .carousel-img {
         width: 100%;
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
+        height: 350px;
+        /* object-fit: cover; */
     }
+
+    
 
     .carousel-actions {
         width: 100%;
@@ -34,6 +38,14 @@ export const StyledCarousel = styled.div `
 
     .car-btn-img {
         width: 10px;
+    }
+
+    @media(min-width:450px) {
+        margin: 2rem auto ;
+
+        .carousel-img {
+            border-radius: 10px;
+        }
     }
 
 

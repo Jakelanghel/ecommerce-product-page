@@ -4,14 +4,14 @@ export const StyledMenu = styled.div `
 width: 65%;
     display: flex;
     flex-direction: column;
-    position: absolute;
+      position: absolute;
     z-index: 1;
-    height: 100vh;
+      height: 100vh;
     background-color: ${({theme}) => theme.colors.white};
     padding: 1.5rem;
 
 
-    img {
+     img {
         width: 15px;
         margin-bottom: 1.5rem;  
     }

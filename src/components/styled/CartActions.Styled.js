@@ -5,6 +5,8 @@ export const StyledCartActions = styled.div `
     font-weight: 700;
     color: ${({theme}) => theme.colors.black};
     padding: 0 1rem;
+    max-width: 450px;
+    margin: 0 auto;
 
     .container-quantity {
         display: flex;
@@ -23,6 +25,12 @@ export const StyledCartActions = styled.div `
         background: inherit;
         color: ${({theme}) => theme.colors.orange};
         padding: .5rem 1.5rem;
+        
+    }
+
+    .cart-img {
+        filter: brightness(0) saturate(100%) invert(99%) sepia(100%) saturate(3%) hue-rotate(200deg) brightness(107%) contrast(100%);
+        margin-right: 1em;
     }
 
     .minus {

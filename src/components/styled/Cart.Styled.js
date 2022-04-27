@@ -2,6 +2,7 @@ import styled from "styled-components"
 
 export const StyledCart = styled.div `
     width: 95%;
+    /* max */
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -40,9 +41,9 @@ export const StyledCart = styled.div `
     }
 
     .delete-btn {
-        width:  15px;
-        height: 15px;
         margin-left: auto;
+        border: none;
+        background-color: transparent;
     }
 
     span {
@@ -62,10 +63,10 @@ export const StyledCart = styled.div `
         border: none;
         border-radius: 10px;
         padding: 1.25rem 0;
-
-
-
     }
+
+    
+
 
 
 

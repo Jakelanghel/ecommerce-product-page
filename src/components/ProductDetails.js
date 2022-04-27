@@ -1,9 +1,13 @@
 import React from "react";
 import { StyledProductDetails } from "./styled/ProductDetails.Styled";
+import Carousel from "./Carousel";
+
 
 const ProductDetails = () => {
   return (
     <StyledProductDetails>
+          <Carousel />
+
       <p className="brand">sneaker company</p>
       <h1 className="product-name">fall limited edition sneakers</h1>
       <p className="product-description">
@@ -12,12 +16,12 @@ const ProductDetails = () => {
         weather can offer.
       </p>
       <div className="container-price">
-          <div>
-            <p className="current-price">$125.00</p>
-            <p className="discount">50%</p>
-          </div>
-          
-          <p className="og-price">$250.00</p>
+        <div>
+          <p className="current-price">$125.00</p>
+          <p className="discount">50%</p>
+        </div>
+
+        <p className="og-price">$250.00</p>
       </div>
     </StyledProductDetails>
   );
