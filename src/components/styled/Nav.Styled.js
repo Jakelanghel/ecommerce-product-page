@@ -3,76 +3,100 @@ import styled from "styled-components";
 export const StyledNav = styled.nav`
   width: 100%;
   display: flex;
-  padding: 1rem;
-  padding-left: 0;
   justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  padding-left: 0.5rem;
   position: relative;
 
-  .desktop-nav-list {
+  .desktop-menu {
     display: none;
   }
 
-  .flex {
-    display: flex;
-    align-items: center;
+  .menu-icon {
+    padding: 1rem;
   }
 
-  .menu-btn {
-    border: none;
-    background-color: transparent;
-    padding: 1rem 1.5rem;
-    display: flex;
+  .logo {
+    padding-bottom: 1rem;
   }
 
-  .avatar-img {
+  .avatar {
     width: 35px;
     margin-left: 1.5rem;
   }
 
+  .cart-icon {
+    margin-bottom: 8px;
+  }
+
+  .nav-right {
+    position: relative;
+  }
+
   .cart-quantity {
-    font-size: 0.5rem;
+    font-size: 0.6rem;
     font-weight: 700;
-    padding: 0 6px;
-    border-radius: 40%;
-    color: ${({ theme }) => theme.colors.white};
-    background-color: ${({ theme }) => theme.colors.orange};
     position: absolute;
-    top: 21px;
-    right: 77px;
+    top: 0;
+    left: 12px;
+    background: var(--orange);
+    color: var(--white);
+    padding: 0.5px 6px;
+    border-radius: 8px;
   }
 
-  .cart-btn {
-    border: none;
-    background-color: transparent;
-  }
-
-  @media (min-width: 900px) {
+  @media screen and (min-width: 900px) {
     width: 80%;
-    position: static;
-    padding: 2rem 0;
-    border-bottom: solid 1px ${({ theme }) => theme.colors.lightGray};
+    padding: 0;
     margin: 0 auto;
-    .desktop-nav-list {
-      width: 60%;
+    margin-bottom: 5rem;
+    border-bottom: solid 1px var(--grey);
+
+    .nav-left {
       display: flex;
-      justify-content: flex-start;
-      align-items: center;
+    }
+
+    .menu-icon {
+      display: none;
+    }
+
+    .desktop-menu {
+      display: flex;
+      margin-top: 5px;
+    }
+
+    .logo {
+      margin-right: 1rem;
+      padding: 2.5rem 0;
+      width: 100%;
+      height: 100%;
     }
 
     .nav-link {
-      color: ${({ theme }) => theme.colors.darkGrayishBlue};
+      font-size: 0.85rem;
+      font-weight: 700;
       text-transform: capitalize;
       text-decoration: none;
-      margin-right: 1.5rem;
+      margin-left: 1rem;
+      color: var(--darkGrayBlue);
+      padding: 2.5rem 0;
+      border-bottom: solid 4px var(--white);
     }
 
-    .menu-btn {
-      padding: 0;
-      display: none;
+    .nav-link:hover {
+      border-bottom: solid 4px var(--orange);
+      cursor: pointer;
     }
 
-    .menu-img {
-      display: none;
+    .cart-icon {
+      cursor: pointer;
+    }
+
+    .avatar:hover {
+      border: solid 2px var(--orange);
+      border-radius: 50%;
+      cursor: pointer;
     }
   }
 `;

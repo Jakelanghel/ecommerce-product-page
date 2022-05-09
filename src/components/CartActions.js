@@ -1,21 +1,25 @@
 import React from "react";
+import images from "../constants/images";
 import { StyledCartActions } from "./styled/CartActions.Styled";
+import { Context } from "../Context";
 
-const CartActions = (props) => {
+export const CartActions = () => {
+  const { productQuantity, addQuantity, subQuantity, addToCart } =
+    React.useContext(Context);
+
   return (
     <StyledCartActions>
       <div className="container-quantity">
-        <button className="cart-btn minus" onClick={props.handleSub}>
-          -
+        <button className="quantity-btn" onClick={subQuantity}>
+          <img src={images.minusIcon} alt="subtract quantity" />
         </button>
-        <p className="count">{props.itemQuantity}</p>
-        <button className="cart-btn" onClick={props.handleAdd}>
-          +
+        <p className="quantity">{productQuantity}</p>
+        <button className="quantity-btn" onClick={addQuantity}>
+          <img src={images.plusIcon} alt="add quantity" />
         </button>
       </div>
-      <button className="add-cart-btn" onClick={props.addToCart}>
-        <img src="./images/icon-cart.svg" alt="cart" className="cart-img" />
-        Add to cart
+      <button className="add-to-cart" onClick={addToCart}>
+        <img src={images.cartIcon} alt="add to cart" /> Add to Cart
       </button>
     </StyledCartActions>
   );

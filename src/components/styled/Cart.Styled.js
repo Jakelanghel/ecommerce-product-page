@@ -1,65 +1,81 @@
 import styled from "styled-components";
 
 export const StyledCart = styled.div`
-  width: 95%;
-  /* max */
-  display: flex;
-  flex-direction: column;
+  width: 90%;
   position: absolute;
-  top: 100px;
+  top: 10px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: var(--white);
   border-radius: 10px;
-  color: ${({ theme }) => theme.colors.darkGrayishBlue};
+  display: flex;
+  flex-direction: column;
 
-  h2 {
+  h3 {
+    color: var(--black);
     font-size: 1rem;
-    padding: 1.25rem;
-    border-bottom: solid 2px ${({ theme }) => theme.colors.lightGray};
-    color: ${({ theme }) => theme.colors.black};
+    border-bottom: solid 1px var(--grey);
+    padding: 1.5rem;
   }
 
-  .container-cart {
+  .container-cart-item {
     display: flex;
     align-items: center;
-    padding: 1.25rem;
+    padding: 1rem;
+
+    .thumb {
+      width: 50px;
+      height: 50px;
+      border-radius: 5px;
+    }
+
+    .item-details {
+      display: flex;
+      flex-direction: column;
+      margin-left: 1rem;
+    }
+
+    P {
+      font-size: 0.95rem;
+    }
+
+    .delete-icon {
+      width: 15px;
+      height: 15px;
+      margin-left: auto;
+    }
+
+    span {
+      color: var(--black);
+      font-weight: 700;
+      margin-left: 5px;
+    }
   }
 
-  .thumbnail {
-    width: 50px;
-    height: 50px;
-    border-radius: 5px;
-    margin-right: 1rem;
-  }
-
-  .description {
-    font-size: 0.85rem;
-    margin-bottom: 0.25rem;
-  }
-
-  .delete-btn {
-    margin-left: auto;
-    border: none;
-    background-color: transparent;
-  }
-
-  span {
-    font-weight: 700;
-    color: ${({ theme }) => theme.colors.black};
-    margin-left: 0.5rem;
-  }
-
-  .checkout-btn {
+  .checkout {
     width: 90%;
-    margin: 0 auto;
-    margin-bottom: 2rem;
-    font-size: 1rem;
+    align-self: center;
     font-weight: 700;
-    color: ${({ theme }) => theme.colors.white};
-    background-color: ${({ theme }) => theme.colors.orange};
+    letter-spacing: 1px;
+    color: var(--white);
+    background-color: var(--orange);
     border: none;
     border-radius: 10px;
-    padding: 1.25rem 0;
+    padding: 1rem 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .empty-msg {
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 5.5rem;
+  }
+
+  @media screen and (min-width: 900px) {
+    width: 325px;
+    top: 100px;
+    transform: translateX(30%);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
 `;

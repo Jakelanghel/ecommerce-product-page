@@ -1,54 +1,74 @@
 import styled from "styled-components";
 
 export const StyledCartActions = styled.div`
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: ${({ theme }) => theme.colors.black};
-  padding: 0 1rem;
-  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 0;
+  width: 100%;
   margin: 0 auto;
 
   .container-quantity {
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    background-color: ${({ theme }) => theme.colors.lightGrayishBlue};
-    padding: 0 0.5rem;
-    border-radius: 10px;
+    background-color: #f7f8fd;
     margin-bottom: 1rem;
+    border-radius: 10px;
+
+    .quantity-btn {
+      border: none;
+      background-color: inherit;
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+    }
+
+    .quantity-btn:hover {
+      cursor: pointer;
+    }
+
+    .quantity {
+      font-weight: 700;
+      padding: 1rem 0;
+    }
   }
 
-  .cart-btn {
-    font-size: 2rem;
+  .add-to-cart {
+    font-size: 1rem;
     font-weight: 700;
-    border: none;
-    background: inherit;
-    color: ${({ theme }) => theme.colors.orange};
-    padding: 0.5rem 1.5rem;
-  }
-
-  .cart-img {
-    filter: brightness(0) saturate(100%) invert(99%) sepia(100%) saturate(3%)
-      hue-rotate(200deg) brightness(107%) contrast(100%);
-    margin-right: 1em;
-  }
-
-  .minus {
-    font-size: 2.5rem;
-  }
-
-  .add-cart-btn {
+    color: var(--white);
+    background-color: var(--orange);
+    padding: 1rem 0;
     display: flex;
-    align-items: center;
     justify-content: center;
-    width: 100%;
-    font-weight: 700;
-    text-transform: capitalize;
+    align-items: center;
     border: none;
     border-radius: 10px;
-    padding: 1rem 0;
-    color: ${({ theme }) => theme.colors.white};
-    background-color: ${({ theme }) => theme.colors.orange};
-    margin-bottom: 8rem;
+
+    img {
+      width: 20px;
+      margin-right: 1rem;
+      filter: brightness(0) saturate(100%) invert(100%) sepia(0%)
+        saturate(7500%) hue-rotate(277deg) brightness(103%) contrast(100%);
+    }
+  }
+
+  .add-to-cart:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+
+  @media screen and (min-width: 900px) {
+    flex-direction: row;
+    justify-content: space-between;
+
+    .container-quantity {
+      width: 35%;
+      margin-bottom: 0;
+    }
+
+    .add-to-cart {
+      width: 45%;
+      padding: 10px 0;
+    }
   }
 `;

@@ -1,58 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
+import images from "../constants/images";
 import { StyledNav } from "./styled/Nav.Styled";
-import Menu from "./Menu";
+import { Context } from "../Context";
+import MobileMenu from "../components/MobileMenu";
 
-const Nav = (props) => {
+const Nav = () => {
+  const { navIsOpen, toggleNav, cartItems, toggleCart } =
+    React.useContext(Context);
   return (
     <StyledNav>
-      {props.isOpen && <Menu handleClick={props.handleClick} />}
-
-      <div className="flex">
-        <button className="menu-btn">
-          <img
-            src="./images/icon-menu.svg"
-            alt="menu"
-            className="menu-img"
-            onClick={props.handleClick}
-          />
-        </button>
-
-        <img src="./images/logo.svg" alt="sneakers logo" className="logo" />
-      </div>
-
-      <div className="desktop-nav-list">
-        <a href="#" className="nav-link">
-          collections
-        </a>
-        <a href="#" className="nav-link">
-          men
-        </a>
-        <a href="#" className="nav-link">
-          women
-        </a>
-        <a href="#" className="nav-link">
-          about
-        </a>
-        <a href="#" className="nav-link">
-          contact
-        </a>
-      </div>
-
-      <div className="flex">
-        {props.cartQuantity > 0 && (
-          <p className="cart-quantity">{props.cartQuantity}</p>
-        )}
-
-        <button className="cart-btn" onClick={props.showCart}>
-          <img src="./images/icon-cart.svg" alt="cart" />
-        </button>
-
+      <div className="nav-left">
         <img
-          src="./images/image-avatar.png"
-          alt="avatar"
-          className="avatar-img"
+          src={images.menuIcon}
+          alt="menu icon"
+          className="menu-icon"
+          onClick={toggleNav}
         />
+        <img src={images.logo} alt="logo" className="logo" />
+
+        <div className="desktop-menu">
+          <a href="collections" className="nav-link">
+            Collections
+          </a>
+          <a href="men" className="nav-link">
+            men
+          </a>
+          <a href="women" className="nav-link">
+            women
+          </a>
+          <a href="about" className="nav-link">
+            about
+          </a>
+          <a href="contact" className="nav-link">
+            contact
+          </a>
+        </div>
       </div>
+
+      <div className="nav-right">
+        <img
+          src={images.cartIcon}
+          alt="cart"
+          className="cart-icon"
+          onClick={toggleCart}
+        />
+        <img src={images.avatar} alt="avatar" className="avatar" />
+        {cartItems > 0 && <p className="cart-quantity">{cartItems}</p>}
+      </div>
+      {navIsOpen && <MobileMenu handleClick={toggleNav} />}
     </StyledNav>
   );
 };
