@@ -19,7 +19,7 @@ export const CartActions = () => {
         </button>
       </div>
       <button className="add-to-cart" onClick={addToCart}>
-        <img src={images.cartIcon} alt="add to cart" /> Add to Cart
+        <img src={images.cartIcon} alt="" /> Add to Cart
       </button>
     </StyledCartActions>
   );

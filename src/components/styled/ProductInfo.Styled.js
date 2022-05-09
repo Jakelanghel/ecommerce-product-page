@@ -63,6 +63,14 @@ export const StyledProdInfo = styled.div`
     margin: 3rem 0;
     margin-left: 5rem;
 
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1rem;
+    }
+
     .container-price {
       flex-direction: column;
       align-items: flex-start;
@@ -71,6 +79,10 @@ export const StyledProdInfo = styled.div`
 
     .price {
       margin-bottom: 1rem;
+    }
+
+    .prod-copy {
+      font-size: 1rem;
     }
   }
 `;

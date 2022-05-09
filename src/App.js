@@ -6,11 +6,11 @@ import { Context } from "./Context";
 
 function App() {
   return (
-    <>
+    <main>
       <GlobalStyles />
       <Nav />
       <Product />
-    </>
+    </main>
   );
 }
 
