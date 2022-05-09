@@ -4,7 +4,6 @@ import { StyledMobileMenu } from "./styled/MobileMenu.Styled";
 import { Context } from "../Context";
 
 export const MobileMenu = (props) => {
-  const { productQuantity, setProductQuantity } = React.useContext(Context);
   return (
     <StyledMobileMenu>
       <img
