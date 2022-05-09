@@ -5,11 +5,11 @@ import GlobalStyles from "./components/styled/Global";
 
 function App() {
   return (
-    <main>
+    <>
       <GlobalStyles />
       <Nav />
       <Product />
-    </main>
+    </>
   );
 }
 

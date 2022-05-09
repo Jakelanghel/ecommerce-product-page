@@ -11,7 +11,6 @@ export const Product = () => {
         <ProductImg />
         <ProductInfo />
       </StyledProductContainer>
-      {/* <CartActions /> */}
     </>
   );
 };
