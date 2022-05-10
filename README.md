@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Frontend mentor](https://www.frontendmentor.io/solutions/react-react-styled-components-react-context-mobile-first-design-B1x9y7wL5#feedback)
-- Github Repo: [Frontend mentor](https://github.com/Jakelanghel/ecommerce-product-page)
+
 - Live Site URL: [github pages](https://jakelanghel.github.io/ecommerce-product-page/)
 
 ## My process
