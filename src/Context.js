@@ -6,6 +6,7 @@ const Context = React.createContext();
 const ContextProvider = ({ children }) => {
   const [navIsOpen, setNavIsOpen] = useState(false);
   const [cartIsOpen, setCartIsOpen] = useState(false);
+  const [lightBoxIsOpen, setLightBoxIsOpen] = useState(false);
   const [productQuantity, setProductQuantity] = useState(0);
   const [cartItems, setCartItems] = useState([]);
   const [carouselCount, setCarouselCount] = useState(0);
@@ -65,6 +66,10 @@ const ContextProvider = ({ children }) => {
     }
   };
 
+  const toggleLightBox = () => {
+    setLightBoxIsOpen((oldState) => !oldState);
+  };
+
   return (
     <Context.Provider
       value={{
@@ -83,6 +88,8 @@ const ContextProvider = ({ children }) => {
         toggleCart,
         emptyCart,
         getImg,
+        lightBoxIsOpen,
+        toggleLightBox,
       }}
     >
       {children}

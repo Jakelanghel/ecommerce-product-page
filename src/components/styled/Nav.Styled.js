@@ -90,7 +90,14 @@ export const StyledNav = styled.nav`
     }
 
     .cart-icon {
+      width: 25px;
+    }
+    .cart-icon:hover {
       cursor: pointer;
+    }
+
+    .avatar {
+      width: 45px;
     }
 
     .avatar:hover {

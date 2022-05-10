@@ -1,27 +1,31 @@
 import React from "react";
-import images from "../constants/images";
-import { StyledProductImg } from "./styled/ProductImg.Styled";
-import Cart from "../components/Cart";
 import { Context } from "../Context";
+import images from "../constants/images";
+import { StyledLightBox } from "./styled/LightBox.Styled";
 
-export const ProductImg = () => {
+export const LightBox = () => {
   const {
     productImgArr,
     carouselCount,
     nextImg,
     prevImg,
-    cartIsOpen,
     getImg,
     toggleLightBox,
   } = React.useContext(Context);
   return (
-    <StyledProductImg>
+    <StyledLightBox>
       <div className="container-img">
+        <img
+          src={images.closeIcon}
+          alt=""
+          className="close-icon"
+          onClick={toggleLightBox}
+        />
+
         <img
           src={productImgArr[carouselCount]}
           alt="shoes"
           className="main-img"
-          onClick={toggleLightBox}
         />
         <div className="desktop-selector">
           <img
@@ -53,19 +57,18 @@ export const ProductImg = () => {
             onClick={getImg}
           />
         </div>
-      </div>
 
-      <div className="mobile-selector">
-        <button className="mobile-sel-btn" onClick={prevImg}>
-          <img src={images.prevIcon} alt="prev-img" />
-        </button>
-        <button className="mobile-sel-btn" onClick={nextImg}>
-          <img src={images.nextIcon} alt="next-img" />
-        </button>
+        <div className="mobile-selector">
+          <button className="mobile-sel-btn" onClick={prevImg}>
+            <img src={images.prevIcon} alt="prev-img" />
+          </button>
+          <button className="mobile-sel-btn" onClick={nextImg}>
+            <img src={images.nextIcon} alt="next-img" />
+          </button>
+        </div>
       </div>
-      {cartIsOpen && <Cart />}
-    </StyledProductImg>
+    </StyledLightBox>
   );
 };
 
-export default ProductImg;
+export default LightBox;

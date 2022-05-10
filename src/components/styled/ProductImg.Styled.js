@@ -17,6 +17,10 @@ export const StyledProductImg = styled.div`
     object-fit: cover;
   }
 
+  .main-img:hover {
+    cursor: pointer;
+  }
+
   @media (min-width: 400px) {
     .main-img {
       height: 400px;
