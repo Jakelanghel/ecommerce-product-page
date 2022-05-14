@@ -5,7 +5,7 @@ import EmptyCart from "./EmptyCart";
 
 export const Cart = () => {
   const { cartItems } = React.useContext(Context);
-  return cartItems === 0 ? <EmptyCart /> : <FullCart />;
+  return cartItems.length === 0 ? <EmptyCart /> : <FullCart />;
 };
 
 export default Cart;

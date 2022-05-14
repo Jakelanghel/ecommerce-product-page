@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const StyledCart = styled.div`
   width: 90%;
+  max-width: 400px;
   position: absolute;
   top: 10px;
   left: 50%;
@@ -10,6 +11,7 @@ export const StyledCart = styled.div`
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
   h3 {
     color: var(--black);
@@ -72,10 +74,13 @@ export const StyledCart = styled.div`
     padding: 5.5rem;
   }
 
+  @media screen and (min-width: 400px) {
+    top: -15px;
+  }
+
   @media screen and (min-width: 900px) {
     width: 325px;
     top: 100px;
     transform: translateX(30%);
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
 `;
