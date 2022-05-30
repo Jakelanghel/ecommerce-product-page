@@ -17,6 +17,13 @@ const ContextProvider = ({ children }) => {
     images.prodImg_4,
   ]);
 
+  const [thumbImgs, sethThumbImgs] = useState([
+    { url: images.prodThumb_1, id: 0 },
+    { url: images.prodThumb_2, id: 1 },
+    { url: images.prodThumb_3, id: 2 },
+    { url: images.prodThumb_4, id: 3 },
+  ]);
+
   const addQuantity = () => {
     setProductQuantity((oldState) => oldState + 1);
   };
@@ -45,17 +52,17 @@ const ContextProvider = ({ children }) => {
     setCartIsOpen(false);
   };
 
+  const getImg = (e) => {
+    const index = parseInt(e.target.id);
+    setCarouselCount(index);
+  };
+
   const nextImg = () => {
     if (carouselCount === productImgArr.length - 1) {
       setCarouselCount(0);
     } else {
       setCarouselCount((oldState) => oldState + 1);
     }
-  };
-
-  const getImg = (e) => {
-    const index = parseInt(e.target.id);
-    setCarouselCount(index);
   };
 
   const prevImg = () => {
@@ -90,6 +97,8 @@ const ContextProvider = ({ children }) => {
         getImg,
         lightBoxIsOpen,
         toggleLightBox,
+        thumbImgs,
+        setCartIsOpen,
       }}
     >
       {children}

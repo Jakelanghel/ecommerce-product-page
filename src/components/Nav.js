@@ -5,7 +5,7 @@ import { Context } from "../Context";
 import MobileMenu from "../components/MobileMenu";
 
 const Nav = () => {
-  const { navIsOpen, toggleNav, cartItems, toggleCart } =
+  const { navIsOpen, toggleNav, cartItems, toggleCart, setCartIsOpen } =
     React.useContext(Context);
   return (
     <StyledNav>

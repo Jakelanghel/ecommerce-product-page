@@ -1,5 +1,4 @@
 import React from "react";
-// import CartActions from "../components/CartActions";
 
 import ProductImg from "../components/ProductImg";
 import ProductInfo from "../components/ProductInfo";

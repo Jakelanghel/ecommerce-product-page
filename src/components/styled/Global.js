@@ -40,6 +40,24 @@ const GlobalStyles = createGlobalStyle`
     color: var(--darkGrayBlue);
   }
 
+  .thumb-container {
+      width: 100%;
+      background-color: var(--white);
+      border: solid 2px var(--orange);
+      border-radius: 12px;
+    }
+
+    .thumbnail {
+      width: 100%;
+      height: 100%;
+      object-fit:cover;
+      border-radius: 10px;
+    }
+
+    .selected {
+      opacity: 0.5;
+    }
+
 `;
 
 export default GlobalStyles;

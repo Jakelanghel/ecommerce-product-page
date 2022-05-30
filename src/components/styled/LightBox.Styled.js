@@ -15,7 +15,12 @@ export const StyledLightBox = styled.div`
     align-self: flex-end;
     margin-bottom: 1rem;
     filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%)
-      hue-rotate(277deg) brightness(103%) contrast(100%);
+      hue-rotate(298deg) brightness(99%) contrast(103%);
+  }
+
+  .close-icon:hover {
+    filter: brightness(0) saturate(100%) invert(66%) sepia(60%) saturate(4503%)
+      hue-rotate(348deg) brightness(102%) contrast(101%);
   }
 
   .main-img {
@@ -33,7 +38,7 @@ export const StyledLightBox = styled.div`
   }
 
   .mobile-selector {
-    width: 485px;
+    width: 495px;
     position: absolute;
     top: 42%;
     transform: translateY(-50%);
@@ -60,8 +65,19 @@ export const StyledLightBox = styled.div`
     justify-content: space-between;
   }
 
-  .thumbnail {
-    width: 75px;
-    border-radius: 10px;
+  .desktop-selector {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+
+    .thumb-container {
+      width: 20%;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    display: none;
   }
 `;

@@ -30,6 +30,9 @@ export const StyledNav = styled.nav`
     margin-bottom: 8px;
   }
 
+  .cart-icon:hover {
+  }
+
   .nav-right {
     position: relative;
   }
@@ -78,7 +81,7 @@ export const StyledNav = styled.nav`
       font-weight: 700;
       text-transform: capitalize;
       text-decoration: none;
-      margin-left: 1rem;
+      margin-left: 2rem;
       color: var(--darkGrayBlue);
       padding: 2.5rem 0;
       border-bottom: solid 4px var(--white);

@@ -1,14 +1,24 @@
 import styled from "styled-components";
 
 export const StyledMobileMenu = styled.div`
+  width: 100%;
   height: 100vh;
-  width: 70%;
   position: absolute;
   top: 0;
   left: 0;
-
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 1;
-  background-color: var(--white);
+
+  .container-mobile-menu {
+    background-color: var(--white);
+    height: 100vh;
+    width: 70%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: 1;
+  }
 
   img {
     padding: 1.5rem;

@@ -6,14 +6,10 @@ export const StyledProductImg = styled.div`
   display: flex;
   flex-direction: column;
 
-  img {
-    width: 100%;
-  }
-
   .main-img {
     width: 100%;
-    height: 300px;
-    max-width: 450px;
+    /* height: 300px; */
+    max-height: 450px;
     object-fit: cover;
   }
 
@@ -83,10 +79,8 @@ export const StyledProductImg = styled.div`
       justify-content: space-between;
       margin-top: 1.5rem;
 
-      img {
-        width: 20%;
-        height: 20%;
-        border-radius: 10px;
+      .thumb-container {
+        width: 23%;
       }
     }
   }

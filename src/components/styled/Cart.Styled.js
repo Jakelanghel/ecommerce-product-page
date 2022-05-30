@@ -5,8 +5,8 @@ export const StyledCart = styled.div`
   max-width: 400px;
   position: absolute;
   top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 50%;
+  transform: translateX(50%);
   background-color: var(--white);
   border-radius: 10px;
   display: flex;
@@ -23,7 +23,7 @@ export const StyledCart = styled.div`
   .container-cart-item {
     display: flex;
     align-items: center;
-    padding: 1rem;
+    padding: 1.5rem 1rem;
 
     .thumb {
       width: 50px;
@@ -79,8 +79,9 @@ export const StyledCart = styled.div`
   }
 
   @media screen and (min-width: 900px) {
-    width: 325px;
-    top: 100px;
-    transform: translateX(30%);
+    width: 350px;
+    top: 95px;
+    transform: translateX(0);
+    right: 50px;
   }
 `;
