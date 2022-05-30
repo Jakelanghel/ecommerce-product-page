@@ -17,13 +17,15 @@ export const ProductImg = () => {
   } = React.useContext(Context);
   return (
     <StyledProductImg>
-      <div className="container-img">
-        <img
-          src={productImgArr[carouselCount]}
-          alt="shoes"
-          className="main-img"
-          onClick={toggleLightBox}
-        />
+      <div className="main-img-container">
+        <div className="container-img">
+          <img
+            src={productImgArr[carouselCount]}
+            alt="shoes"
+            className="main-img"
+            onClick={toggleLightBox}
+          />
+        </div>
 
         <div className="desktop-selector">
           <div className="thumb-container">
